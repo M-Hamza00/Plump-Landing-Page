@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <title>Plump</title>
+  </head>
+  <body>
+    <div class="sidebar" id="sideBar">
+      <div class="navButton" id="navButtons">
+        <button class="navBtn1" id="navBtn1">Games</button>
+        <button class="navBtn2" id="navBtn2">Sports</button>
+        <button class="sliderNav1" id="slideNav">
+          <img src="./images/sliderNav.svg" alt="" />
+        </button>
+      </div>
+      <div class="navContainer1" id="navContainer1">
+        <div class="inputNav">
+          <input type="text" name="text" placeholder="Search" />
+          <img src="./images/searchNav.svg" alt="" class="searchIcon" />
+        </div>
+
+        <div class="navImg">
+          <div class="navSectionText">
+            <div class="navText">
+              <p class="welcome">Welcome Bonus</p>
+              <p class="welcomeText">
+                100% up to $1,000 <br />
+                on first deposit only.
+              </p>
+            </div>
+            <div><button class="navSignUp">SIGN UP NOW</button></div>
+          </div>
+          <div class="navTop">
+            <img src="./images/navGift.svg" alt="" />
+          </div>
+          <div class="navBase">
+            <img src="./images/navSectionBg.svg" alt="banner" />
+          </div>
+          <div class="navBg"></div>
+        </div>
+        <div class="navUls">
+          <ul>
+            <li class="home navActive">
+              <img src="./images/homeNav.svg" alt="" />
+              <p class="liText">Home</p>
+            </li>
+            <li class="home">
+              <img src="./images/gamesNav.svg" alt="" />
+              <p class="liText">Games</p>
+            </li>
+            <li class="home">
+              <img src="./images/sportsNav.svg" alt="" />
+              <p class="liText">Sports</p>
+            </li>
+            <li class="home">
+              <img src="./images/vipNav.svg" alt="" />
+              <p class="liText">VIP Experience</p>
+            </li>
+            <li class="home">
+              <img src="./images/communityNav.svg" alt="" />
+              <p class="liText">Affiliate Program</p>
+            </li>
+          </ul>
+          <div class="more">More</div>
+          <ul>
+            <li class="home">
+              <img src="./images/liveNav.svg" alt="" />
+              <p class="liText">Live Support</p>
+            </li>
+            <li class="home">
+              <img src="./images/aboutUsNav.svg" alt="" />
+              <p class="liText">About Us</p>
+            </li>
+            <li class="home">
+              <img src="./images/communityNav.svg" alt="" />
+              <p class="liText">Language</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navContainer2" id="navContainer2">
+        <button class="navAfterBtn1 slide2Hover">
+          <img src="./images/section2logo1.png" alt="img" />
+        </button>
+        <button class="navAfterBtn2 slide2Hover">
+          <img src="./images/section2logo2.png" alt="img" />
+        </button>
+        <button class="inputNav2 slide2Hover">
+          <img src="./images/searchNav.svg" alt="" />
+        </button>
+        <li class="nav2Button slide2Hover navActive">
+          <img src="./images/homeNav.svg" alt="" />
+        </li>
+        <li class="nav2Button slide2Hover">
+          <img src="./images/gamesNav.svg" alt="" />
+        </li>
+        <li class="nav2Button slide2Hover">
+          <img src="./images/sportsNav.svg" alt="" />
+        </li>
+        <li class="nav2Button slide2Hover">
+          <img src="./images/vipNav.svg" alt="" />
+        </li>
+        <li class="nav2Button slide2Hover">
+          <img src="./images/communityNav.svg" alt="" />
+        </li>
+        <p class="navDivider"></p>
+        <li class="nav2Button slide2Hover">
+          <img src="./images/liveNav.svg" alt="" />
+        </li>
+        <li class="nav2Button slide2Hover">
+          <img src="./images/aboutUsNav.svg" alt="" />
+        </li>
+        <li class="nav2Button slide2Hover">
+          <img src="./images/communityNav.svg" alt="" />
+        </li>
+      </div>
+    </div>
+    <div class="main" id="main">
+      <div class="header">
+        <div class="header-child">
+          <div><img src="./images/plumpLogo.svg" alt="Logo" /></div>
+          <div class="headerButton">
+            <div>
+              <button class="transparentButton" onclick="loginDisplay()">
+                Login
+              </button>
+            </div>
+            <div id="loginModalPage" class="loginModalPage">
+              <div class="loginModalContainer">
+                <div class="loginLeftPanel1" id="loginLeft1">
+                  <div class="loginTabs">
+                    <button
+                      class="tab"
+                      onclick="registerTab()"
+                      id="modalRegisterButton"
+                    >
+                      Register
+                    </button>
+                    <button class="tab activeLoginTab" onclick="loginTab()">
+                      Login
+                    </button>
+                  </div>
+                  <div class="loginInput">
+                    <div class="loginField">
+                      <p class="loginInputText">Email Address or Username</p>
+                      <input
+                        type="text"
+                        name="text"
+                        placeholder="Enter Email or User Name"
+                      />
+                    </div>
+                    <div class="loginField">
+                      <p class="loginInputText">Password</p>
+                      <div class="inputNav">
+                        <input type="text" name="text" placeholder="Password" />
+                        <img
+                          src="./images/searchNav.svg"
+                          alt=""
+                          class="passwordEye"
+                        />
+                      </div>
+                      <p class="forgetPassword">Forget Password</p>
+                    </div>
+                  </div>
+                  <button class="submitButtonModal purpleButton">Login</button>
+                  <div class="continueWith">
+                    <div></div>
+                    <p>OR CONTINUE WITH</p>
+                    <div></div>
+                  </div>
+                  <div class="loginFormButtons">
+                    <button class="transparentButton">
+                      <img src="./images/google.svg" alt="" />
+                      <p>GOOGLE</p>
+                    </button>
+                    <button class="transparentButton">
+                      <img src="./images/stream.svg" alt="" />
+                      <p>STREAM</p>
+                    </button>
+                  </div>
+                </div>
+                <div class="loginLeftPanel2" id="loginLeft2">
+                  <div class="loginTabs">
+                    <button class="tab activeLoginTab" onclick="registerTab()">
+                      Register
+                    </button>
+                    <button
+                      class="tab"
+                      onclick="loginTab()"
+                      id="modalLoginButton"
+                    >
+                      Login
+                    </button>
+                  </div>
+                  <div class="loginFormButtons">
+                    <button class="transparentButton">
+                      <img src="./images/google.svg" alt="" />
+                      <p>GOOGLE</p>
+                    </button>
+                    <button class="transparentButton">
+                      <img src="./images/stream.svg" alt="" />
+                      <p>STREAM</p>
+                    </button>
+                    <button class="transparentButton">
+                      <img src="./images/metamaskLogo.svg" alt="" />
+                      <p>METAMASK</p>
+                    </button>
+                  </div>
+                  <div class="continueWith">
+                    <div></div>
+                    <p>OR CONTINUE WITH</p>
+                    <div></div>
+                  </div>
+                  <div class="loginInput">
+                    <div class="loginField">
+                      <p class="loginInputText">Username</p>
+                      <input
+                        type="text"
+                        name="text"
+                        placeholder="Enter Username"
+                      />
+                    </div>
+                    <div class="loginField">
+                      <p class="loginInputText">Email Address</p>
+                      <input
+                        type="text"
+                        name="text"
+                        placeholder="Enter Email Address"
+                      />
+                    </div>
+                    <div class="loginField modalPassword">
+                      <p class="loginInputText">Password</p>
+                      <div class="inputNav">
+                        <input
+                          type="password"
+                          name="text"
+                          placeholder="Password"
+                          class="passwordInput"
+                        />
+                        <img
+                          src="./images/searchNav.svg"
+                          alt=""
+                          class="passwordEye"
+                        />
+                        <div class="popup">
+                          <ul>
+                            <li class="rule" data-rule="length">
+                              <span class="icon">⊗</span> At least 8 characters
+                            </li>
+                            <li class="rule" data-rule="number">
+                              <span class="icon">⊗</span> At least 1 number
+                            </li>
+                            <li class="rule" data-rule="special">
+                              <span class="icon">⊗</span> Includes at least one
+                              special character
+                            </li>
+                            <li class="rule" data-rule="case">
+                              <span class="icon">⊗</span> Includes both
+                              uppercase and lowercase letters
+                            </li>
+                          </ul>
+                          <div class="popup-arrow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="modalDivider"></div>
+                      <div class="referralCode loginField">
+                        <div>
+                          <p class="loginInputText">Referral Text (Optional)</p>
+                          <img
+                            src="./images/section10Img.png"
+                            alt=""
+                            id="referralCode"
+                          />
+                        </div>
+                        <input
+                          type="text"
+                          name="text"
+                          placeholder="Enter Referral Code"
+                          id="inputReferralCode"
+                        />
+                      </div>
+                      <div class="modalDivider"></div>
+                    </div>
+                    <div class="modalCheckbox">
+                      <input type="checkbox" id="inputCheckbox" />
+                      <p>
+                        I agree to the <a href="">Terms & Conditions</a> and
+                        confirm I'm 18 or older
+                      </p>
+                    </div>
+                  </div>
+                  <button class="submitButtonModal purpleButton">
+                    CREATE ACCOUNT
+                  </button>
+                </div>
+                <div class="rightPanel">
+                  <div class="rightPanelBg">
+                    <img src="./images/starGif.gif" alt="gif" />
+                    <img src="./images/starGif.gif" alt="gif" />
+                  </div>
+                  <div class="rightPanelBgColor"></div>
+                  <div class="rightPanelLogo">
+                    <img src="./images/plumpLogo.svg" alt="Plump" />
+                  </div>
+                  <div class="rightPanelText">
+                    <img src="./images/modalSpin.svg" alt="spin" class="spin" />
+                    <img
+                      src="./images/modalTreasure.svg"
+                      alt="treasure"
+                      class="treasure"
+                    />
+                    <img src="./images/navGift.svg" alt="" class="loginGift" />
+                    <p class="rightPanelWelcome">Welcome Bonus</p>
+                    <p class="rightPanelWelcomeText">
+                      100% Bonus match up to $1000 on first Deposit
+                    </p>
+                    <a href="">T&Cs apply</a>
+                  </div>
+                </div>
+                <img
+                  src="./images/cross.svg"
+                  alt=""
+                  class="close"
+                  onclick="closeModal()"
+                />
+              </div>
+            </div>
+            <div>
+              <button class="purpleButton" onclick="registerDisplay()">
+                Register
+              </button>
+            </div>
+            <div class="headerBar"></div>
+            <div>
+              <button class="messageButton">
+                <img src="./images/msgLogo.png" alt="msg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section1">
+          <div class="topImg">
+            <img src="./images/Banner.png" alt="" />
+          </div>
+          <div class="baseImg">
+            <img
+              src="./images/Black And White Loop GIF by Pi-Slices 1.png"
+              alt=""
+            />
+            <img
+              src="./images/Black And White Loop GIF by Pi-Slices 1.png"
+              alt=""
+            />
+            <img
+              src="./images/Black And White Loop GIF by Pi-Slices 1.png"
+              alt=""
+            />
+          </div>
+          <div class="bannerBg"></div>
+          <div class="section1Child">
+            <div class="section1Text">
+              <p class="realGames">Real Games, Real Bets. Instant Payouts</p>
+              <p class="liveDealers">
+                Live Dealers, Provably Fair Play, Fast Crypto Cash-Outs.
+              </p>
+            </div>
+            <div class="section1Button">
+              <div><button class="purpleButton">Play Now</button></div>
+              <div>
+                <button class="transparentButton">Explore Games</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section2" id="s2-container"></div>
+        <div class="section3">
+          <div class="section3-heading">
+            <img src="./images/liveWinLogo.png" alt="LOGO" />
+            <p class="headingNames">Live Wins</p>
+          </div>
+          <div class="section3Shadow"></div>
+          <div class="section3Games swiper s3Swiper">
+            <div class="swiper-wrapper" id="s3-Games"></div>
+          </div>
+        </div>
+        <div class="section4">
+          <div class="section4-child">
+            <div class="section4-heading1">
+              <div class="section4-heading1">
+                <img src="./images/originalsLogo.png" alt="LOGO" class="logo" />
+                <p class="headingNames">Plump Originals</p>
+              </div>
+              <div class="section4Buttons">
+                <button class="section4-button1">View All</button>
+                <div class="arrow-buttons">
+                  <button class="section4-button2 swiper-prev-button">
+                    <img src="./images/arrowLeft.svg" alt="" class="arrows" />
+                  </button>
+                  <button class="section4-button2 swiper-next-button">
+                    <img src="./images/arrowRight.svg" alt="" class="arrows" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper s4Swiper section4-img1">
+            <div class="swiper-wrapper" id="s4-container"></div>
+          </div>
+        </div>
+        <div class="section5">
+          <div class="section5-heading">
+            <img src="./images/sportLogo.svg" alt="LOGO" class="logo" />
+            <p class="sportsHeadingNames">Sports</p>
+          </div>
+          <div class="section4-img2" id="s5-container"></div>
+        </div>
+        <div class="section6">
+          <div class="section6container">
+            <div class="section6child1">
+              <img src="./images/section5Img1.png" alt="" />
+              <div class="section6Text">300% Deposit Bonus</div>
+            </div>
+            <div class="section6child2">
+              <div class="section6-time">12</div>
+              <div>:</div>
+              <div class="section6-time">23</div>
+              <div>:</div>
+              <div class="section6-time">55</div>
+            </div>
+            <div class="section6child3">
+              <img
+                src="./images/section5Img2.png"
+                alt="IMG
+            "
+              />
+            </div>
+          </div>
+        </div>
+        <div class="section7">
+          <div class="section7-child">
+            <div class="section4-heading1">
+              <div class="section4-heading1">
+                <img src="./images/originalsLogo.png" alt="LOGO" class="logo" />
+                <p class="headingNames">Trending Games</p>
+              </div>
+              <div class="section4Buttons">
+                <button class="section4-button1">View All</button>
+                <div class="arrow-buttons">
+                  <button class="section4-button2 s7-swiper-prev-button">
+                    <img src="./images/prevArrow.svg" alt="" class="arrows" />
+                  </button>
+                  <button class="section4-button2 s7-swiper-next-button">
+                    <img src="./images/nextArrow.svg" alt="" class="arrows" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper s7Swiper section7-imgContainer">
+              <div class="swiper-wrapper" id="s7-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="section8">
+          <div class="section4-child">
+            <div class="section4-heading1">
+              <div class="section4-heading1">
+                <img src="./images/section7Logo.png" alt="LOGO" class="logo" />
+                <p class="headingNames">Live now</p>
+              </div>
+              <div class="section4Buttons">
+                <button class="section4-button1">View All</button>
+                <div class="arrow-buttons">
+                  <button class="section4-button2 s8-swiper-prev-button">
+                    <img src="./images/prevArrow.svg" alt="" class="arrows" />
+                  </button>
+                  <button class="section4-button2 s8-swiper-next-button">
+                    <img src="./images/nextArrow.svg" alt="" class="arrows" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="section8-tables swiper s8-swiper">
+              <div class="swiper-wrapper" id="s8-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="section9">
+          <div class="section4-child">
+            <div class="section4-heading1">
+              <div class="section4-heading1">
+                <img src="./images/section7Logo.png" alt="LOGO" class="logo" />
+                <p class="headingNames">Providers</p>
+              </div>
+              <div class="section4Buttons">
+                <button class="section4-button1">View All</button>
+                <div class="arrow-buttons">
+                  <button class="section4-button2 s9-swiper-prev-button">
+                    <img src="./images/prevArrow.svg" alt="" class="arrows" />
+                  </button>
+                  <button class="section4-button2 s9-swiper-next-button">
+                    <img src="./images/nextArrow.svg" alt="" class="arrows" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper s9-swiper section9-buttons">
+              <div class="swiper-wrapper" id="s9-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="section10">
+          <div class="section10-child1" id="section10Child">
+            <div class="activeButton"><button>Latest Bets</button></div>
+            <div><button>High Wins</button></div>
+            <div><button>My Bets</button></div>
+          </div>
+          <div class="section10-child2">
+            <div class="bets-container">
+              <div class="row-header rowHeader1">
+                <div>Game</div>
+                <div>User</div>
+                <div>Time</div>
+                <div>Wager</div>
+                <div>Multiplier</div>
+                <div>Payout</div>
+              </div>
+              <div class="row1">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid1Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Treasure Spin</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/blueBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/usdt.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/usdt.png" alt=""
+                  /></span>
+                  <span class="dollars">$12.00</span>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid2Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>The Green Knight</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/brownBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/trx.png" alt="" />
+                  </span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier dollars">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/trx.png" alt="" />
+                  </span>
+                  <span>$12.00</span>
+                </div>
+              </div>
+              <div class="row1">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid3Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Lucky Strike</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/pinkBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/usdc.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier dollars">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/usdc.png" alt=""
+                  /></span>
+                  <span class="dollars">$12.00</span>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid4Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Frost Empire</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/orangeBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/cryptocurrency.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier dollars">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/cryptocurrency.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+              </div>
+              <div class="row1">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid5Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Fruit Frenzy</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/blueBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/Supported Currencies.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/Supported Currencies.png" alt=""
+                  /></span>
+                  <span class="dollars">$12.00</span>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid6Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Jungle Wilds</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/yellowBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/trx.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier dollars">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/trx.png" alt=""
+                  /></span>
+                  <span class="dollars">$12.00</span>
+                </div>
+              </div>
+              <div class="row1">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid7Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Fire God</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/whiteBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/bnb.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/bnb.png" alt=""
+                  /></span>
+                  <span class="dollars">$12.00</span>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid8Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Heart of Vegas</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/pinkBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/d currency.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/d currency.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+              </div>
+              <div class="row1">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid9Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Frost Empire</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/orangeBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/cryptocurrency.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/cryptocurrency.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="game">
+                  <span class="game-icon"
+                    ><img src="./images/grid10Img.png" alt="" class="gridImg"
+                  /></span>
+                  <span>Mystic Vault</span>
+                </div>
+                <div class="user">
+                  <span class="user-badge"
+                    ><img src="./images/orangeBadge.png" alt="" class="badge"
+                  /></span>
+                  <span>Rugged</span>
+                </div>
+                <div class="time">07:00 PM</div>
+                <div class="token">
+                  <span class="token-icon"
+                    ><img src="./images/btc.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+                <div class="multiplier">$23.95</div>
+                <div class="payout">
+                  <span class="token-icon"
+                    ><img src="./images/btc.png" alt=""
+                  /></span>
+                  <span>$12.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section11">
+          <div class="section11-child1">
+            <img src="./images/section10Logo.png" alt="LOGO" />
+            <p class="needHelp">Need Help?</p>
+          </div>
+          <div class="section11-child2">
+            <div class="section11-faq">
+              <p class="question">How does Plump ensure fair gaming?</p>
+              <img
+                src="./images/section10Img.png"
+                alt="Arrow Down"
+                id="questionArrow"
+                onclick="answerBox()"
+              />
+            </div>
+            <div class="section11-faq">
+              <p class="question">How do I sign up for Plump?</p>
+              <img
+                src="./images/section10Img.png"
+                alt="Arrow Down"
+                id="questionArrow"
+                onclick="answerBox()"
+              />
+            </div>
+            <div class="section11-faq">
+              <p class="question">
+                Is my personal and financial information safe with Plump?
+              </p>
+              <img
+                src="./images/section10Img.png"
+                alt="Arrow Down"
+                id="questionArrow"
+                onclick="answerBox()"
+              />
+            </div>
+            <div class="section11-faq">
+              <p class="question">How can I withdraw my winnings from Plump?</p>
+              <img
+                src="./images/section10Img.png"
+                alt="Arrow Down"
+                id="questionArrow"
+                onclick="answerBox()"
+              />
+            </div>
+            <div class="section11-faq">
+              <p class="question">Does Plump offer bonuses or promotions?</p>
+              <img
+                src="./images/section10Img.png"
+                alt="Arrow Down"
+                id="questionArrow"
+                onclick="answerBox()"
+              />
+            </div>
+            <div class="section11-faq">
+              <p class="question">
+                Can I play Plump games on my mobile device?
+              </p>
+              <img
+                src="./images/section10Img.png"
+                alt="Arrow Down"
+                id="questionArrow"
+                onclick="answerBox()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-child1">
+          <div class="footerC1-sections">
+            <div class="listItem-heading">PLUMP FEATURES</div>
+            <div class="list-of-items">
+              <p class="list-text">Game Fairness</p>
+              <p class="list-text">Partner with Us</p>
+              <p class="list-text">Promo Vault</p>
+              <p class="list-text">Loyalty Tiers</p>
+              <p class="list-text">Crypto Conversions</p>
+            </div>
+          </div>
+          <div class="footerC1-sections">
+            <div class="listItem-heading">HELP & SUPPORT</div>
+            <div class="list-of-items">
+              <p class="list-text">24/7 Live Chat</p>
+              <p class="list-text">Help Center</p>
+              <p class="list-text">Play Safe Guidelines</p>
+              <p class="list-text">Player Protection</p>
+            </div>
+          </div>
+          <div class="footerC1-sections">
+            <div class="listItem-heading">LEGAL & INFO</div>
+            <div class="list-of-items">
+              <p class="list-text">User Agreement</p>
+              <p class="list-text">Data & Privacy</p>
+              <p class="list-text">Responsible Play Policy</p>
+              <p class="list-text">Anti-Money Laundering</p>
+              <p class="list-text">Game Categories</p>
+            </div>
+          </div>
+          <div class="footerC1-sections">
+            <div class="listItem-heading">FOR PARTNERS</div>
+            <div class="list-of-items">
+              <p class="list-text">Affiliate Hub</p>
+              <p class="list-text">Press Kit</p>
+              <p class="list-text">Brand Assets</p>
+              <p class="list-text">Influencer Program</p>
+            </div>
+          </div>
+          <div class="footerC1-sections">
+            <div class="listItem-heading">COMMUNITY</div>
+            <div class="interactingApps">
+              <button class="interactingButtons">
+                <img src="./images/discord.svg" alt="" />
+              </button>
+              <button class="interactingButtons">
+                <img src="./images/twitter.svg" alt="" />
+              </button>
+              <button class="interactingButtons">
+                <img src="./images/messenger.svg" alt="" />
+              </button>
+              <button class="interactingButtons">
+                <img src="./images/instagram.svg" alt="" />
+              </button>
+              <button class="interactingButtons">
+                <img src="./images/tiktok.svg" alt="" />
+              </button>
+              <button class="interactingButtons">
+                <img src="./images/facebook.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-child2">
+          <p class="list-text">SUPPORTED CURRENCIES</p>
+          <img src="./images/footerC2Img.png" alt="" />
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-child3">
+          Plump is committed to responsible gaming. Please play responsibly and
+          only if you are above the legal age of gambling in your
+          jurisdiction.All crypto-based features on Plump, including trading or
+          NFT utilities, operate independently from our licensed gaming services
+          and are not governed under our gambling license. Users engage in these
+          features at their own discretion.
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-child4">
+          <div><img src="./images/plumpLogo.png" alt="Logo" /></div>
+          <div class="footerC3-section">
+            <p class="list-text">© 2025 Plump.com — All Rights Reserved.</p>
+            <img src="./images/footerC4Img1.png" alt="" class="footerImg" />
+            <img src="./images/footerC4Img2.png" alt="" class="footerImg" />
+            <img src="./images/footerC4Img3.png" alt="" class="footerImg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
